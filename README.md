@@ -6,7 +6,7 @@ A boilerplate for creating vue apps with firebase integration.
 ```
 npm install
 ```
-Create .env.local file and add the firebase credentials of your database:
+Create .env.local file and add your firebase credentials of your database:
 ```
 VUE_APP_API_KEY=your api key
 VUE_APP_AUTH_DOMAIN=auth domain
