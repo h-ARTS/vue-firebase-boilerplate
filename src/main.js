@@ -1,10 +1,10 @@
 import Vue from 'vue'
 
-import { firestorePlugin } from 'vuefire'
+import { rtdbPlugin } from 'vuefire'
 
 import App from './App.vue'
 
-Vue.use(firestorePlugin)
+Vue.use(rtdbPlugin)
 
 Vue.config.productionTip = false
 
