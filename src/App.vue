@@ -6,10 +6,7 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 import Firebase from 'firebase'
-
 
 let config = {
   apiKey: process.env.VUE_APP_API_KEY,
@@ -24,18 +21,22 @@ let config = {
 let app = Firebase.initializeApp(config)
 let db = app.database()
 
-let booksRef = db.ref('books')
-
 export default {
   name: 'app',
   firebase: {
-    books: booksRef
+    books: db.ref('books')
   },
-  components: {
-    HelloWorld
+  data() {
+    return {
+      books: [],
+      newBook: {
+        title: '',
+        author: '',
+        url: ''
+      }
+    }
   },
-  mounted() {
-    console.log(process.env)
+  },
   },
 }
 </script>
